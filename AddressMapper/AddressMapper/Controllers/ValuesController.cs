@@ -54,7 +54,7 @@ namespace AddressMapper.Controllers
                     //data pushed to redis as hash
                     var dataForDocument = _cacheRepo.ConvertDataForDocument(dataForCache);
                     //push to search index
-                    var resultforIndex = _cacheRepo.AddDataToIndex(cacheDb, "addressIndex", dataForDocument);
+                    var resultforIndex = _cacheRepo.AddDataToIndex(_cacheDb, "addressIndex", dataForDocument);
                     //once check 
 
                 }

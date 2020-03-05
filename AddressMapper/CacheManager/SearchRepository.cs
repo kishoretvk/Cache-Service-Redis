@@ -25,7 +25,7 @@ namespace CacheManager
             Parallel.ForEach(addressdata, singledoc=>
            {
                 var documentMapperData = new DocumentMapper();
-               documentMapperData.RedisKey = singledoc.Key,
+               documentMapperData.RedisKey = singledoc.Key;
                documentMapperData.DocumentData = singledoc.AddressData.
                Where(pair =>
                 ((pair.Value != null) || (!string.IsNullOrEmpty(pair.Value))))
